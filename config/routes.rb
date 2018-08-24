@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 	get 'welcome/home', to: 'welcome#home'
+	root 'welcome#home'
 
 
 	#welcome/home will shown at the browser and action will be welcome controller ko home action dinxa
