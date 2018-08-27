@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 	get 'welcome/home', to: 'welcome#home'
-	root 'welcome#home'
+	root 'welcome#home'   #it will redirect to the default link to the  home page
 
 
 	#welcome/home will shown at the browser and action will be welcome controller ko home action dinxa
