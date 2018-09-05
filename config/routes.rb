@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+
+  get 'createblogpost/postit'   #controller and action is defined here
+
+  get 'aboutpage/index'
+
+  post 'createblogpost/postit', to: 'createblogpost#create'
+
+  get 'createblogpost/edit/:id', to: 'createblogpost#edit'
+  
+  devise_for :users
+  devise_for :models
 	get 'welcome/home', to: 'welcome#home'
 	root 'welcome#home'   #it will redirect to the default link to the  home page
 

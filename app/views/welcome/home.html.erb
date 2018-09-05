@@ -1,3 +1,27 @@
-<h1>this is home page</h1>
 
-<%= link_to 'About', welcome_about_path %>
+<table>
+  
+  <% @post.each do |post| %> 
+    <div class="container rounded">
+      <h2><%= post.title %></h2>
+     
+      
+      <p ><%= post.description %></p>
+
+
+      <%if current_user.id == post.user_id%>
+      	<a href="/createblogpost/edit/<%= post.id%>" class="btn btn-secondary"> Edit</a>  <!--we can write link inside anchor tag and it will redirect to createblogpost ko edit form ma-->
+      	<button type="button" class="btn btn-secondary">Delete</button>
+     
+      <%end%>
+    <hr style="width: 100%; color: black; height: 1px; background-color:black;" />
+
+    </div>
+  <% end %>
+</table>
+
+
+<!--this is  for logout button and user sign in check -->
+<!-- first user authentication garxa pahile ani yo page ma aauxa -->
+
+
